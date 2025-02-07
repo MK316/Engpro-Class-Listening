@@ -98,14 +98,14 @@ with tab2:
         answer = st.radio(
             f"Question {i}: {word_pairs[i][0]} / {word_pairs[i][1]}",
             word_pairs[i],
-            key=f'question_{i}'  # This key ensures each question has a unique radio button group
+            key=f'tab2_question_{i}'  # Unique key by prefixing with 'tab2_'
         )
         
         # Save the answer in the dictionary
         answers[i] = answer
     
     # Button to check answers
-    if st.button('Check Answers'):
+    if st.button('Check Answers', key='tab2_check_answers'):  # Ensure unique key for the button as well
         correct_count = 0
         incorrect_feedback = []
         for q in answers:
