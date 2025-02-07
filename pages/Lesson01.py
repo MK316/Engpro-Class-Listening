@@ -241,3 +241,38 @@ with tab4:
 
         # Optionally delete the temp file if needed
         # os.remove(audio_file)
+    st.write("---")
+    st.header("Choose an Audio and Playback Speed")
+
+    # Audio files
+    audio_urls = {
+        'Male': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-M.mp3?raw=true',
+        'Female': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-F.mp3?raw=true',
+        'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-Elliot.mp3?raw=true'
+    }
+
+    # User selects the audio speed
+    audio_speed = st.radio("Select the playback speed for the audios:", ('Normal', 'Slow', 'Slower'), key='audio_speed')
+
+    # User selects which audio to play
+    selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'])
+    selected_audio_url = audio_urls[selected_voice]
+
+    # Playback speed control (adjust this to suit your actual audio processing)
+    if audio_speed == 'Normal':
+        playback_rate = 1.0
+    elif audio_speed == 'Slow':
+        playback_rate = 0.75
+    elif audio_speed == 'Slower':
+        playback_rate = 0.5
+
+    # Display audio with controls
+    st.markdown(f"""
+    <audio controls>
+        <source src="{selected_audio_url}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.querySelector('audio').playbackRate = {playback_rate};
+    </script>
+    """, unsafe_allow_html=True)
