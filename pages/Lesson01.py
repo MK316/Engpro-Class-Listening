@@ -125,16 +125,16 @@ with tab2:
 with tab3:
     # Define the sentences with choice pairs as shown in the image
     sentence_pairs = {
-        1: ("They cleaned the", ["ship", "sheep"]),
-        2: ("Will he", ["leave", "live"]),
-        3: ("The boy was", ["beaten", "bitten"]),
-        4: ("His clothes are", ["neat", "knit"]),
-        5: ("She has plump", ["cheeks", "chicks"]),
-        6: ("I like low", ["heels", "hills"]),
-        7: ("The children will", ["sleep", "slip"]),
-        8: ("I heard every", ["beat", "bit"]),
-        9: ("They stored the", ["beans", "bins"]),
-        10: ("Everyone talks about the", ["heat", "hit"])
+        1: ("They cleaned the _______.", ["ship", "sheep"]),
+        2: ("Will he _______?", ["leave", "live"]),
+        3: ("The boy was _______.", ["beaten", "bitten"]),
+        4: ("His clothes are _______.", ["neat", "knit"]),
+        5: ("She has plump _______.", ["cheeks", "chicks"]),
+        6: ("I like low _______.", ["heels", "hills"]),
+        7: ("The children will _______.", ["sleep", "slip"]),
+        8: ("I heard every _______.", ["beat", "bit"]),
+        9: ("They stored the _______.", ["beans", "bins"]),
+        10: ("Everyone talks about the _______.", ["heat", "hit"])
     }
 
     # Provide a single audio file that contains all questions
