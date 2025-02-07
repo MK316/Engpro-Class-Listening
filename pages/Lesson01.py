@@ -208,7 +208,7 @@ with tab4:
     st.write("Select the speed and generate the audio for the provided text.")
 
     # Text to be converted to speech
-    text = """The Beatles were an English rock band that formed in Liverpool, in 1960.
+    text = """The Beatles were an English rock band that formed in Liverpool in 1960.
               With John Lennon, Paul McCartney, George Harrison and Ringo Starr,
               they became widely regarded as the greatest and most influential act of
               the rock era. Rooted in skiffle, beat and 1950s rock and roll, the Beatles
