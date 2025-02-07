@@ -63,7 +63,67 @@ with tab1:
                 st.text(feedback)
 
 with tab2:
-    st.write("Content for Exercise B")
+    # Define the pairs of words as shown in the image
+    word_pairs = {
+        1: ("field", "filled"),
+        2: ("bean", "bin"),
+        3: ("neat", "knit"),
+        4: ("deal", "dill"),
+        5: ("beat", "bit"),
+        6: ("team", "Tim"),
+        7: ("sleep", "slip"),
+        8: ("green", "grin"),
+        9: ("heel", "hill"),
+        10: ("week", "wick")
+    }
+
+    # Provide a single audio file that contains all questions
+    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
+    st.audio(audio_file, format='audio/wav', start_time=0)
+
+    # Display instructions
+    st.write("You’ll hear one word. Listen and circle the word that you hear.")
+    
+    # This dictionary will hold the user's answers
+    answers = {}
+    # Define the correct answers (update these as per your quiz answers)
+    correct_answers = {
+        1: "filled", 2: "bin", 3: "knit", 4: "dill", 5: "bit",
+        6: "Tim", 7: "slip", 8: "grin", 9: "hill", 10: "wick"
+    }
+
+    # Loop through the number of questions to display them
+    for i in word_pairs:
+        # Let the user select an answer
+        answer = st.radio(
+            f"Question {i}: {word_pairs[i][0]} / {word_pairs[i][1]}",
+            word_pairs[i],
+            key=f'question_{i}'  # This key ensures each question has a unique radio button group
+        )
+        
+        # Save the answer in the dictionary
+        answers[i] = answer
+    
+    # Button to check answers
+    if st.button('Check Answers'):
+        correct_count = 0
+        incorrect_feedback = []
+        for q in answers:
+            if answers[q] == correct_answers[q]:
+                correct_count += 1
+            else:
+                incorrect_feedback.append(f"Question {q}: Your answer was {answers[q]}, but the correct answer is {correct_answers[q]}.")
+
+        # Display the result
+        st.write(f'You answered {correct_count} out of {len(word_pairs)} correctly!')
+        
+        if incorrect_feedback:
+            st.subheader("Review the incorrect answers:")
+            for feedback in incorrect_feedback:
+                st.text(feedback)
+
+with tab3:
+    st.write("Content for Exercise C")
 
 with tab3:
     st.write("Content for Exercise C")
