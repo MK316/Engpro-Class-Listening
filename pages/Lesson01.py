@@ -258,13 +258,17 @@ with tab4:
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
     selected_audio_url = audio_urls[selected_voice]
 
+    # Use session state to store the URL and enforce audio reload on change
+    if 'audio_url' not in st.session_state or st.session_state['audio_url'] != selected_audio_url:
+        st.session_state['audio_url'] = selected_audio_url
+
     # Determining the playback rate based on user selection
     playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
 
     # Display audio with adjusted speed
     st.markdown(f"""
     <audio controls>
-        <source src="{selected_audio_url}" type="audio/mp3">
+        <source src="{st.session_state['audio_url']}" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
     <script>
