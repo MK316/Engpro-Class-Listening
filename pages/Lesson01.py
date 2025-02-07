@@ -228,7 +228,7 @@ with tab4:
         st.audio(audio_bytes, format='audio/mp3')
 
     st.write("---")
-    st.header("Choose an Audio and Playback Speed")
+    st.header("🍎 Practice with different voices at different speed")
 
     # Audio files
     audio_urls = {
