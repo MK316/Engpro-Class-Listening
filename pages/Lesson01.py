@@ -27,7 +27,9 @@ with tab1:
     ---
     <Example>  
 
-    (you will hear) 1. mitt  2. meat 3. meat  
+    (you will hear) 
+    
+    1. mitt  2. meat 3. meat  
     """)
     st.markdown("---")
     
