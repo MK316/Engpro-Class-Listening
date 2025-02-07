@@ -3,7 +3,7 @@ import streamlit as st
 # Create a tab bar with three tabs
 tab1, tab2, tab3 = st.tabs(["Exercise A", "Exercise B", "Exercise C"])
 
-with tabs[0]:
+with tabs[1]:
 
   # Define the number of questions
   num_questions = 10
@@ -46,7 +46,7 @@ with tabs[0]:
       st.write(f'You answered {correct_count} out of {num_questions} correctly!')
   
 
-with tabs[1]:
-    st.write("test")
 with tabs[2]:
+    st.write("test")
+with tabs[3]:
     st.write("test")
