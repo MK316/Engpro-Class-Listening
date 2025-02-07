@@ -22,6 +22,13 @@ with tab1:
     
     # Display instructions
     st.write("Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
+
+    st.markdown("""
+    <Example>  
+
+    (you will hear) 1. mitt  2. meat 3. meat  
+    """)
+    st.markdown("---")
     
     # Loop through the number of questions to display them
     for i in range(1, num_questions + 1):
