@@ -196,7 +196,7 @@ with tab4:
     the rock era. Rooted in skiffle, beat and 1950s rock and roll, the Beatles
     later experimented with several genres, ranging from pop ballads and Indian music to
     psychedelic and hard rock, often incorporating classical elements in innovative ways.
-    In the early 1960s, their enormous popularity first emerged as "Beatlemania", but as
+    In the early 1960s, their enormous popularity first emerged as 'Beatlemania', but as
     their songwriting grew in sophistication they came to be perceived as an embodiment
     of the ideals shared by the era's sociocultural revolutions.
     
