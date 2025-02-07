@@ -9,25 +9,25 @@ st.write("Get familiarized with the vowel symbols")
 st.markdown("""
 1. [i]: <span style="color:blue">She sees three green trees near</span> the <span style="color:green">deep sea</span>.  
 
-2. [ɪ]: It's <span style="color:red">pretty</span> <span style="color:blue">chilly</span> in the <span style="color:green">city</span> this winter.  
+2. [ɪ]: <span style="color:red">It's pretty chilly in </span>the <span style="color:green">city this winter</span>.  
 
-3. [e]: Let's <span style="color:blue">get</span> some <span style="color:red">fresh</span> <span style="color:green">bread</span> and celebrate.  
+3. [ɛ]: <span style="color:blue">Let's get</span> some <span style="color:red">fresh bread</span> and <span style="color:red">celebrate</span>.  
 
-4. [æ]: Jack <span style="color:red">grabbed</span> a <span style="color:blue">snack</span> and sat on the <span style="color:green">back</span> deck.  
+4. [æ]: <span style="color:red">Jack grabbed</span> a <span style="color:blue">snack and sat</span> on the <span style="color:green">back</span> deck.  
 
-5. [ɑ]: <span style="color:blue">Mark</span> <span style="color:red">parked</span> his car in the dark <span style="color:green">barn</span>.  
+5. [ɑ]: <span style="color:blue">Mark parked</span> his <span style="color:blue">car</span> in the <span style="color:green">dark barn</span>.  
 
-6. [ʊ]: <span style="color:red">Good</span> cooks <span style="color:blue">look</span> for full <span style="color:green">wood</span> bookshelves.  
+6. [ʊ]: <span style="color:red">Good cooks look</span> for <span style="color:red">full wood bookshelves</span>.  
 
-7. [u]: <span style="color:blue">Sue</span> uses a <span style="color:red">blue</span> spoon to scoop <span style="color:green">soup</span>.  
+7. [u]: <span style="color:blue">Sue uses <span style="color:blue">a</span> <span style="color:blue">blue spoon</span> to <span style="color:blue">scoop soup</span>.  
 
-8. [ʌ]: A <span style="color:red">bunch</span> of us <span style="color:blue">must</span> discuss the <span style="color:green">subject</span>.  
+8. [ʌ]: A <span style="color:red">bunch</span> of <span style="color:blue">us must discuss</span> the <span style="color:green">subject</span>.  
 
-9. [ɔ]: <span style="color:red">All</span> the small <span style="color:blue">laws</span> are for <span style="color:green">all</span>.  
+9. [ɔ]: <span style="color:red">All</span> the <span style="color:red">small laws</span> are for <span style="color:green">all</span>.  
 
-10. [ə]: A <span style="color:blue">week</span> ago, the gentleman opened another <span style="color:red">sofa</span> shop.  
+10. [ə]: <span style="color:blue">A</span> week <span style="color:blue">ago</span>, <span style="color:blue">the gentleman opened another sofa</span> shop.  
 
-11. [eɪ]: They <span style="color:blue">made</span> their <span style="color:red">way</span> to the <span style="color:green">lake</span> today.  
+11. [eɪ]: <span style="color:blue">They made</span> their <span style="color:red">way</span> to the <span style="color:green">lake today</span>.  
 
 12. [aɪ]: I <span style="color:red">like</span> <span style="color:blue">riding</span> my <span style="color:green">bike</span> by the lively riverside.  
 
