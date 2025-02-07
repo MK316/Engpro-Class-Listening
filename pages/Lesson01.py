@@ -228,7 +228,7 @@ with tab4:
         st.audio(audio_bytes, format='audio/mp3')
 
     st.write("---")
-    st.markdown("#### 🍎 Practice with different voices at different speed")
+    st.markdown("#### 🍎 Shadowing: Practice with different voices")
 
     # Audio files
     audio_urls = {
@@ -238,7 +238,7 @@ with tab4:
     }
 
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
-
+    st.caption("You can change the speech by clicking the three vertical dots in the audio panel.")
     if st.button("Show Selected Audio"):
         selected_audio_url = audio_urls[selected_voice]
 
