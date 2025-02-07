@@ -251,13 +251,6 @@ with tab4:
         'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-Elliot.mp3?raw=true'
     }
 
-    # Audio files
-    audio_urls = {
-        'Male': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/male_voice.mp3?raw=true',
-        'Female': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/female_voice.mp3?raw=true',
-        'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/mk316_voice.mp3?raw=true'
-    }
-
     # User selects the audio speed
     audio_speed = st.radio("Select the playback speed for the audios:", ('Normal', 'Slow', 'Slower'), key='audio_speed')
 
