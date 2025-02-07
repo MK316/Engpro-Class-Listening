@@ -239,7 +239,7 @@ with tab4:
 
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
 
-    if st.button("Play Selected Audio"):
+    if st.button("Show Selected Audio"):
         selected_audio_url = audio_urls[selected_voice]
 
         # Display audio without adjusted speed (default playback)
