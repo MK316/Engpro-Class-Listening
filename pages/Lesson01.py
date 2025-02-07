@@ -45,11 +45,19 @@ with tab1:
     # Button to check answers
     if st.button('Check Answers'):
         correct_count = 0
+        incorrect_feedback = []
         for q in answers:
             if int(answers[q]) == correct_answers[q]:
                 correct_count += 1
+            else:
+                incorrect_feedback.append(f"Question {q}: Your answer was {answers[q]}, but the correct answer is {correct_answers[q]}.")
         # Display the result
         st.write(f'You answered {correct_count} out of {num_questions} correctly!')
+        
+        if incorrect_feedback:
+            st.subheader("Review the incorrect answers:")
+            for feedback in incorrect_feedback:
+                st.text(feedback)
 
 with tab2:
     st.write("Content for Exercise B")
