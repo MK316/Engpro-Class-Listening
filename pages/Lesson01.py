@@ -244,7 +244,7 @@ with tab4:
 
         # Display audio without adjusted speed (default playback)
         st.markdown(f"""
-        <audio controls autoplay>
+        <audio controls>
             <source src="{selected_audio_url}" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
