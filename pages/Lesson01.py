@@ -249,8 +249,9 @@ with tab4:
             Your browser does not support the audio element.
         </audio>
         """, unsafe_allow_html=True)
-    st.markdonw("---")
-        st.write("Read aloud - The Beatles")
+    st.markdown("---")
+    
+    st.write("Read aloud - The Beatles")
     st.markdown("""
     The Beatles were an English rock band that formed in Liverpool, in 1960.  
     With John Lennon, Paul McCartney, George Harrison and Ringo Starr,  
