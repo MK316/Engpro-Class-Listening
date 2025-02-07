@@ -3,7 +3,7 @@ from gtts import gTTS
 import os
 
 # Create a tab bar with three tabs
-tab1, tab2, tab3, tab4 = st.tabs(["Exercise A", "Exercise B", "Exercise C", "Read-aloud"])
+tab1, tab2, tab3, tab4 = st.tabs(["🎱 Exercise A", "🎱 Exercise B", "🎱 Exercise C", "🎾 Read-aloud"])
 
 with tab1:
 
