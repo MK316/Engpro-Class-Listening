@@ -237,27 +237,15 @@ with tab4:
         'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-Elliot.mp3?raw=true'
     }
 
-    audio_speed = st.radio("Select the playback speed for the audios:", ('Normal', 'Slow', 'Slower'), key='audio_speed')
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
 
     if st.button("Play Selected Audio"):
         selected_audio_url = audio_urls[selected_voice]
-        playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
 
-        # Display audio with adjusted speed and ensure the playback rate is set each time
+        # Display audio without adjusted speed (default playback)
         st.markdown(f"""
-        <audio controls autoplay onloadedmetadata="this.playbackRate={playback_rate};">
+        <audio controls autoplay>
             <source src="{selected_audio_url}" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
-        """, unsafe_allow_html=True)
-
-        # Ensure playback rate changes are applied whenever the user interacts with the audio controls
-        st.markdown("""
-        <script>
-            const audioElement = document.querySelector('audio');
-            audioElement.onplay = () => {
-                audioElement.playbackRate = {playback_rate};
-            };
-        </script>
         """, unsafe_allow_html=True)
