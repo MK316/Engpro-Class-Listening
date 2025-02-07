@@ -255,24 +255,30 @@ with tab4:
     audio_speed = st.radio("Select the playback speed for the audios:", ('Normal', 'Slow', 'Slower'), key='audio_speed')
 
     # User selects which audio to play
-    selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'])
+    selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
     selected_audio_url = audio_urls[selected_voice]
 
-    # Playback speed control (adjust this to suit your actual audio processing)
-    if audio_speed == 'Normal':
-        playback_rate = 1.0
-    elif audio_speed == 'Slow':
-        playback_rate = 0.75
-    elif audio_speed == 'Slower':
-        playback_rate = 0.5
+    # Display audio with controls using session state to force update
+    if 'audio_reset' not in st.session_state:
+        st.session_state.audio_reset = False
+    
+    play_button = st.button("Play Audio")
+    
+    if play_button or st.session_state.audio_reset:
+        st.session_state.audio_reset = True
+        
+        # Playback rate setup
+        playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
 
-    # Display audio with controls
-    st.markdown(f"""
-    <audio controls>
-        <source src="{selected_audio_url}" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    <script>
-        document.querySelector('audio').playbackRate = {playback_rate};
-    </script>
-    """, unsafe_allow_html=True)
+        # Display audio with adjusted speed
+        st.markdown(f"""
+        <audio controls>
+            <source src="{selected_audio_url}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <script>
+            var aud = document.querySelector('audio');
+            aud.playbackRate = {playback_rate};
+            aud.load();  // Reload the audio file to apply the playback rate
+        </script>
+        """, unsafe_allow_html=True)
