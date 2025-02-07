@@ -240,16 +240,21 @@ with tab4:
     audio_speed = st.radio("Select the playback speed for the audios:", ('Normal', 'Slow', 'Slower'), key='audio_speed')
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
 
-    # Force reload the audio player when selection changes
-    playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
-    audio_key = f"{selected_voice}_{audio_speed}"  # Creating a unique key based on voice and speed
-    st.audio(audio_urls[selected_voice], format='audio/mp3', start_time=0, key=audio_key)
+    # Force Streamlit to re-render the audio widget by changing state
+    if 'audio_refresh' not in st.session_state:
+        st.session_state.audio_refresh = False
+    st.session_state.audio_refresh = not st.session_state.audio_refresh  # Toggle state to force re-render
 
+    selected_audio_url = audio_urls[selected_voice]
+    playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
+
+    # Display audio with adjusted speed
     st.markdown(f"""
+    <audio controls autoplay>
+        <source src="{selected_audio_url}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {{
-            const audio = document.querySelector('[data-baseweb="audio"]');
-            audio.playbackRate = {playback_rate};
-        }});
+        document.querySelector('audio').playbackRate = {playback_rate};
     </script>
     """, unsafe_allow_html=True)
