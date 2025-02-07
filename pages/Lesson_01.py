@@ -75,10 +75,16 @@ speeds = {
 output_dir = "generated_audio"
 os.makedirs(output_dir, exist_ok=True)
 
-# Generate audio for each sentence in different speeds
+# Streamlit section to display and play audio
+st.markdown("### 🎧 Listen and Practice:")
+
+# Iterate through each sentence and generate audio
 for vowel, sentence in sentences.items():
-    for speed_name, slow_mode in speeds.items():
-        tts = gTTS(text=sentence, lang='en', slow=slow_mode)
-        filename = f"{output_dir}/{vowel.strip('[]')}_{speed_name}.mp3"
-        tts.save(filename)
-        print(f"Generated: {filename}")
+    tts = gTTS(text=sentence, lang='en', slow=False)
+    filename = f"{output_dir}/{vowel.strip('[]')}_Normal.mp3"
+    tts.save(filename)
+
+    # Display sentence and play button
+    st.write(f"🔊 **{vowel}:** {sentence}")
+    with open(filename, "rb") as audio_file:
+        st.audio(audio_file.read(), format="audio/mp3")
