@@ -251,6 +251,13 @@ with tab4:
         'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-Elliot.mp3?raw=true'
     }
 
+    # Audio files
+    audio_urls = {
+        'Male': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/male_voice.mp3?raw=true',
+        'Female': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/female_voice.mp3?raw=true',
+        'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/mk316_voice.mp3?raw=true'
+    }
+
     # User selects the audio speed
     audio_speed = st.radio("Select the playback speed for the audios:", ('Normal', 'Slow', 'Slower'), key='audio_speed')
 
@@ -258,28 +265,18 @@ with tab4:
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
     selected_audio_url = audio_urls[selected_voice]
 
-    # Display audio with controls using session state to force update
-    play_button = st.button("Play Audio")
+    # Determining the playback rate based on user selection
+    playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
 
-    # Condition to reload the audio whenever the voice or speed changes
-    if 'last_voice' not in st.session_state or 'last_speed' not in st.session_state:
-        st.session_state.last_voice = selected_voice
-        st.session_state.last_speed = audio_speed
-
-    if play_button or st.session_state.last_voice != selected_voice or st.session_state.last_speed != audio_speed:
-        st.session_state.last_voice = selected_voice
-        st.session_state.last_speed = audio_speed
-        playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
-
-        # Display audio with adjusted speed
-        st.markdown(f"""
-        <audio controls>
-            <source src="{selected_audio_url}" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <script>
-            var aud = document.querySelector('audio');
-            aud.playbackRate = {playback_rate};
-            aud.load();  // Reload the audio file to apply the playback rate
-        </script>
-        """, unsafe_allow_html=True)
+    # Display audio with adjusted speed
+    st.markdown(f"""
+    <audio controls>
+        <source src="{selected_audio_url}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        var aud = document.querySelector('audio');
+        aud.playbackRate = {playback_rate};
+        aud.load();  // Force reload the audio file to apply the playback rate
+    </script>
+    """, unsafe_allow_html=True)
