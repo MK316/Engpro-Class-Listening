@@ -218,29 +218,15 @@ with tab4:
               their songwriting grew in sophistication they came to be perceived as an embodiment
               of the ideals shared by the era's sociocultural revolutions."""
 
-    # Option to select speed
     speed = st.radio("Choose the speech speed:", ('Normal', 'Slow', 'Slower'), key='speech_speed')
 
-    # Setting the speed rate
-    if speed == 'Normal':
-        speed_rate = 1.0
-    elif speed == 'Slow':
-        speed_rate = 0.8
-    else:
-        speed_rate = 0.6
-
-    # Button to generate the audio
     if st.button('Generate Audio'):
         tts = gTTS(text, lang='en', slow=(speed != 'Normal'))
-        # Save to a temporary file
         audio_file = '/tmp/audio.mp3'
         tts.save(audio_file)
-        # Display the audio player
         audio_bytes = open(audio_file, "rb").read()
         st.audio(audio_bytes, format='audio/mp3')
 
-        # Optionally delete the temp file if needed
-        # os.remove(audio_file)
     st.write("---")
     st.header("Choose an Audio and Playback Speed")
 
@@ -251,29 +237,19 @@ with tab4:
         'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-Elliot.mp3?raw=true'
     }
 
-    # User selects the audio speed
     audio_speed = st.radio("Select the playback speed for the audios:", ('Normal', 'Slow', 'Slower'), key='audio_speed')
-
-    # User selects which audio to play
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
-    selected_audio_url = audio_urls[selected_voice]
 
-    # Use session state to store the URL and enforce audio reload on change
-    if 'audio_url' not in st.session_state or st.session_state['audio_url'] != selected_audio_url:
-        st.session_state['audio_url'] = selected_audio_url
-
-    # Determining the playback rate based on user selection
+    # Force reload the audio player when selection changes
     playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
+    audio_key = f"{selected_voice}_{audio_speed}"  # Creating a unique key based on voice and speed
+    st.audio(audio_urls[selected_voice], format='audio/mp3', start_time=0, key=audio_key)
 
-    # Display audio with adjusted speed
     st.markdown(f"""
-    <audio controls>
-        <source src="{st.session_state['audio_url']}" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
     <script>
-        var aud = document.querySelector('audio');
-        aud.playbackRate = {playback_rate};
-        aud.load();  // Force reload the audio file to apply the playback rate
+        document.addEventListener('DOMContentLoaded', function() {{
+            const audio = document.querySelector('[data-baseweb="audio"]');
+            audio.playbackRate = {playback_rate};
+        }});
     </script>
     """, unsafe_allow_html=True)
