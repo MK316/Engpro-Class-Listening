@@ -122,17 +122,6 @@ with tab2:
             for feedback in incorrect_feedback:
                 st.text(feedback)
 
-import streamlit as st
-
-# Create a tab bar with three tabs
-tab1, tab2, tab3 = st.tabs(["Exercise A", "Exercise B", "Exercise C"])
-
-with tab1:
-    st.write("Content for Exercise A")
-
-with tab2:
-    st.write("Content for Exercise B")
-
 with tab3:
     # Define the sentences with choice pairs as shown in the image
     sentence_pairs = {
