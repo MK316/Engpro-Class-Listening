@@ -24,6 +24,7 @@ with tab1:
     st.write("Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
 
     st.markdown("""
+    ---
     <Example>  
 
     (you will hear) 1. mitt  2. meat 3. meat  
