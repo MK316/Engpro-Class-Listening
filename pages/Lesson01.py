@@ -259,15 +259,16 @@ with tab4:
     selected_audio_url = audio_urls[selected_voice]
 
     # Display audio with controls using session state to force update
-    if 'audio_reset' not in st.session_state:
-        st.session_state.audio_reset = False
-    
     play_button = st.button("Play Audio")
-    
-    if play_button or st.session_state.audio_reset:
-        st.session_state.audio_reset = True
-        
-        # Playback rate setup
+
+    # Condition to reload the audio whenever the voice or speed changes
+    if 'last_voice' not in st.session_state or 'last_speed' not in st.session_state:
+        st.session_state.last_voice = selected_voice
+        st.session_state.last_speed = audio_speed
+
+    if play_button or st.session_state.last_voice != selected_voice or st.session_state.last_speed != audio_speed:
+        st.session_state.last_voice = selected_voice
+        st.session_state.last_speed = audio_speed
         playback_rate = 1.0 if audio_speed == 'Normal' else 0.75 if audio_speed == 'Slow' else 0.5
 
         # Display audio with adjusted speed
