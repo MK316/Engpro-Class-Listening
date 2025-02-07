@@ -1,4 +1,6 @@
 import streamlit as st
+from gtts import gTTS
+import os
 
 # Create a tab bar with three tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Exercise A", "Exercise B", "Exercise C", "Read-aloud"])
@@ -202,3 +204,40 @@ with tab4:
     
     _From wikipedia.org_
     """)
+    st.header("Generate Audio with Different Speeds")
+    st.write("Select the speed and generate the audio for the provided text.")
+
+    # Text to be converted to speech
+    text = """The Beatles were an English rock band that formed in Liverpool, in 1960.
+              With John Lennon, Paul McCartney, George Harrison and Ringo Starr,
+              they became widely regarded as the greatest and most influential act of
+              the rock era. Rooted in skiffle, beat and 1950s rock and roll, the Beatles
+              later experimented with several genres, ranging from pop ballads and Indian music to
+              psychedelic and hard rock, often incorporating classical elements in innovative ways.
+              In the early 1960s, their enormous popularity first emerged as "Beatlemania", but as
+              their songwriting grew in sophistication they came to be perceived as an embodiment
+              of the ideals shared by the era's sociocultural revolutions."""
+
+    # Option to select speed
+    speed = st.radio("Choose the speech speed:", ('Normal', 'Slow', 'Slower'), key='speech_speed')
+
+    # Setting the speed rate
+    if speed == 'Normal':
+        speed_rate = 1.0
+    elif speed == 'Slow':
+        speed_rate = 0.8
+    else:
+        speed_rate = 0.6
+
+    # Button to generate the audio
+    if st.button('Generate Audio'):
+        tts = gTTS(text, lang='en', slow=(speed != 'Normal'))
+        # Save to a temporary file
+        audio_file = '/tmp/audio.mp3'
+        tts.save(audio_file)
+        # Display the audio player
+        audio_bytes = open(audio_file, "rb").read()
+        st.audio(audio_bytes, format='audio/mp3')
+
+        # Optionally delete the temp file if needed
+        # os.remove(audio_file)
