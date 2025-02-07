@@ -122,8 +122,73 @@ with tab2:
             for feedback in incorrect_feedback:
                 st.text(feedback)
 
-with tab3:
-    st.write("Content for Exercise C")
+import streamlit as st
+
+# Create a tab bar with three tabs
+tab1, tab2, tab3 = st.tabs(["Exercise A", "Exercise B", "Exercise C"])
+
+with tab1:
+    st.write("Content for Exercise A")
+
+with tab2:
+    st.write("Content for Exercise B")
 
 with tab3:
-    st.write("Content for Exercise C")
+    # Define the sentences with choice pairs as shown in the image
+    sentence_pairs = {
+        1: ("They cleaned the", ["ship", "sheep"]),
+        2: ("Will he", ["leave", "live"]),
+        3: ("The boy was", ["beaten", "bitten"]),
+        4: ("His clothes are", ["neat", "knit"]),
+        5: ("She has plump", ["cheeks", "chicks"]),
+        6: ("I like low", ["heels", "hills"]),
+        7: ("The children will", ["sleep", "slip"]),
+        8: ("I heard every", ["beat", "bit"]),
+        9: ("They stored the", ["beans", "bins"]),
+        10: ("Everyone talks about the", ["heat", "hit"])
+    }
+
+    # Provide a single audio file that contains all questions
+    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
+    st.audio(audio_file, format='audio/wav', start_time=0)
+
+    # Display instructions
+    st.write("Listen and circle the word that is used to complete each sentence.")
+
+    # This dictionary will hold the user's answers
+    answers = {}
+    # Define the correct answers (update these as per your quiz answers)
+    correct_answers = {
+        1: "ship", 2: "leave", 3: "bitten", 4: "neat", 5: "cheeks",
+        6: "hills", 7: "sleep", 8: "bit", 9: "bins", 10: "heat"
+    }
+
+    # Loop through the number of questions to display them
+    for i in sentence_pairs:
+        # Let the user select an answer
+        answer = st.radio(
+            f"Question {i}: {sentence_pairs[i][0]}",
+            sentence_pairs[i][1],
+            key=f'tab3_question_{i}'  # Unique key by prefixing with 'tab3_'
+        )
+        
+        # Save the answer in the dictionary
+        answers[i] = answer
+    
+    # Button to check answers
+    if st.button('Check Answers', key='tab3_check_answers'):  # Ensure unique key for the button as well
+        correct_count = 0
+        incorrect_feedback = []
+        for q in answers:
+            if answers[q] == correct_answers[q]:
+                correct_count += 1
+            else:
+                incorrect_feedback.append(f"Question {q}: Your answer was {answers[q]}, but the correct answer is {correct_answers[q]}.")
+
+        # Display the result
+        st.write(f'You answered {correct_count} out of {len(sentence_pairs)} correctly!')
+        
+        if incorrect_feedback:
+            st.subheader("Review the incorrect answers:")
+            for feedback in incorrect_feedback:
+                st.text(feedback)
