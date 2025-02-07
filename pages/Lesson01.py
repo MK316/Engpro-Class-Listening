@@ -204,7 +204,7 @@ with tab4:
     
     _From wikipedia.org_
     """)
-    st.header("Generate Audio with Different Speeds")
+    st.markdown("#### 🍎 1. Generate Audio with Different Speeds")
     st.write("Select the speed and generate the audio for the provided text.")
 
     # Text to be converted to speech
@@ -228,7 +228,7 @@ with tab4:
         st.audio(audio_bytes, format='audio/mp3')
 
     st.write("---")
-    st.markdown("#### 🍎 Shadowing: Practice with different voices")
+    st.markdown("#### 🍎 2. Shadowing: Practice with different voices")
 
     # Audio files
     audio_urls = {
