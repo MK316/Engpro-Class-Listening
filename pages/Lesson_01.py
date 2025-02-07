@@ -7,7 +7,7 @@ st.write("Get familiarized with the vowel symbols")
 
 # Use HTML with inline CSS for font color on target vowel words
 st.markdown("""
-1. [i]: She <span style="color:blue">sees</span> three <span style="color:red">green</span> trees near the deep <span style="color:green">sea</span>.  
+1. [i]: <span style="color:blue">She sees three green trees near</span> the <span style="color:green">deep sea</span>.  
 
 2. [ɪ]: It's <span style="color:red">pretty</span> <span style="color:blue">chilly</span> in the <span style="color:green">city</span> this winter.  
 
