@@ -6,24 +6,27 @@ st.markdown("### Preview and practice English vowels.")
 st.write("Get familiarized with the vowel symbols")
 
 st.markdown("""
-[i]: 1. She sees three green trees near the deep sea.  
-[ɪ]: 2. It's pretty chilly in the city this winter.  
-[e]: 3. Let's get some fresh bread and celebrate.  
-[æ]: 4. Jack grabbed a snack and sat on the back deck.  
-[ɑ]: 5. Mark parked his car in the dark barn.  
-[ʊ]: 6. Good cooks look for full wood bookshelves.  
-[u]: 7. Sue uses a blue spoon to scoop soup.  
-[ʌ]: 8. A bunch of us must discuss the subject.  
-[ɔ]: 9. All the small laws are for all.  
-[ə]: 10. A week ago, the gentleman opened another sofa shop.  
-[eɪ]: 11. They made their way to the lake today.  
-[aɪ]: 12. I like riding my bike by the lively riverside.  
-[aʊ]: 13. How now brown cow.  
-[ɔɪ]: 14. The noisy boys enjoyed the royal oysters.  
-[oʊ]: 15. Go home alone and phone Joan.  
-[ɝ]: 16. The nurse works first on Thursday.  
-[ɚ]: 17. Anna's umbrella covers her brother in the summer weather.  
+1. [i]: She sees three green trees near the deep sea.  
+
+2. [ɪ]: It's pretty chilly in the city this winter.  
+
+3. [e]: Let's get some fresh bread and celebrate.  
+4. [æ]: Jack grabbed a snack and sat on the back deck.  
+5. [ɑ]: Mark parked his car in the dark barn.  
+6. [ʊ]: Good cooks look for full wood bookshelves.  
+7. [u]: Sue uses a blue spoon to scoop soup.  
+8. [ʌ]: A bunch of us must discuss the subject.  
+9. [ɔ]: All the small laws are for all.  
+10. [ə]: A week ago, the gentleman opened another sofa shop.  
+11. [eɪ]: They made their way to the lake today.  
+12. [aɪ]: I like riding my bike by the lively riverside.  
+13. [aʊ]: How now brown cow.  
+14. [ɔɪ]: The noisy boys enjoyed the royal oysters.  
+15. [oʊ]: Go home alone and phone Joan.  
+16. [ɝ]: The nurse works first on Thursday.  
+17. [ɚ]: Anna's umbrella covers her brother in the summer weather.  
 """)
+
 
 # Define sentences
 sentences = {
