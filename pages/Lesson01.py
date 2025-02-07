@@ -26,10 +26,15 @@ with tab1:
     st.markdown("""
     ---
     <Example>  
-
+    Q: Choose ONE that is different from the others.
+    
     (you will hear) 
     
     1. mitt  2. meat 3. meat  
+
+    (you answer)
+
+    1. mitt
     """)
     st.markdown("---")
     
