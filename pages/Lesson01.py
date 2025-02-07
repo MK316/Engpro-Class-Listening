@@ -6,6 +6,8 @@ tab1, tab2, tab3 = st.tabs(["Exercise A", "Exercise B", "Exercise C"])
 with tabs[0]:
   import streamlit as st
 
+import streamlit as st
+
 # Define the number of questions
 num_questions = 10
 # This dictionary will hold the user's answers
@@ -19,12 +21,15 @@ correct_answers = {
 
 st.title('Listening Quiz')
 
+# Provide a single audio file that contains all questions
+audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
+st.audio(audio_file, format='audio/wav', start_time=0)
+
+# Display instructions
+st.write("Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
+
 # Loop through the number of questions to display them
 for i in range(1, num_questions + 1):
-    # Display the audio file for the question
-    audio_file = f'https://github.com/yourusername/yourrepo/blob/main/audio{i}.mp3?raw=true'
-    st.audio(audio_file, format='audio/mp3', start_time=0)
-
     # Let the user select an answer
     answer = st.radio(
         f"Question {i}",
@@ -43,6 +48,7 @@ if st.button('Check Answers'):
             correct_count += 1
     # Display the result
     st.write(f'You answered {correct_count} out of {num_questions} correctly!')
+
 
 with tabs[1]:
 
