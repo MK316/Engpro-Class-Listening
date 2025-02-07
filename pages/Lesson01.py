@@ -4,8 +4,6 @@ import streamlit as st
 tab1, tab2, tab3 = st.tabs(["Exercise A", "Exercise B", "Exercise C"])
 
 with tabs[0]:
-  import streamlit as st
-
 
   # Define the number of questions
   num_questions = 10
