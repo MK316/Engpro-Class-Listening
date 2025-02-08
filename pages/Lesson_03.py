@@ -73,7 +73,7 @@ with tab1:
 with tab2:
     st.write("Read aloud - Little Red Riding Hood")
     st.markdown("""
-    The story revolves around a girl called Little Red Riding Hood, 
+    Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, 
     after the red hooded cape/cloak she wears. The girl walks through the woods 
     to deliver food to her sickly grandmother (wine and cake depending on the translation). 
     In the Grimms' version at least, she had the order from her mother to stay strictly on the path.
@@ -90,7 +90,7 @@ with tab2:
     st.write("Select the speed and generate the audio for the provided text.")
 
     # Text to be converted to speech
-    text = """The story revolves around a girl called Little Red Riding Hood, after the
+    text = """Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, after the
     red hooded cape/cloak she wears. The girl walks through the woods to
     deliver food to her sickly grandmother (wine and cake depending on the
     translation). In the Grimms' version at least, she had the order from her
@@ -136,9 +136,9 @@ with tab2:
         """, unsafe_allow_html=True)
     st.markdown("---")
     
-    st.write("Read aloud - The Beatles")
+    st.write("Read aloud - Little Red Riding Hood. ")
     st.markdown("""
-    The story revolves around a girl called Little Red Riding Hood, 
+    Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, 
     after the red hooded cape/cloak she wears. The girl walks through the woods 
     to deliver food to her sickly grandmother (wine and cake depending on the translation). 
     In the Grimms' version at least, she had the order from her mother to stay strictly on the path.
