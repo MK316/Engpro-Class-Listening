@@ -2,7 +2,7 @@ import streamlit as st
 from gtts import gTTS
 import io
 
-st.title("🔊 Comparing Pronunciation of Borrowed Words")
+st.markdown("#### 🔊 Comparing Pronunciation of Borrowed Words")
 
 # List of borrowed words in Korean and English
 borrowed_words = {
