@@ -3,11 +3,11 @@ from gtts import gTTS
 import io
 
 # Create a new page for the lesson
-st.title("📘 Lesson: Stress Shift in Noun-Verb Pairs")
+st.markdown("### 📘 Lesson: Stress Shift in Noun-Verb Pairs")
 
 # Introduction
 st.markdown("""
-### Understanding Noun-Verb Stress Shift
+#### Understanding Noun-Verb Stress Shift
 Some English words change their stress pattern depending on whether they are a **noun** or a **verb**.
 """, unsafe_allow_html=True)
 
@@ -42,7 +42,7 @@ def generate_audio(sentence):
     return audio_data
 
 # User selection for audio playback
-st.markdown("### 🎧 Listen to Examples")
+st.markdown("#### 🎧 Listen to Examples")
 selected_word = st.selectbox("Choose a word to hear its noun and verb pronunciation:", list(word_pairs.keys()))
 
 if selected_word:
