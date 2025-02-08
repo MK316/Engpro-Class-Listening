@@ -7,7 +7,7 @@ st.markdown("### 📘 Lesson: Stress Shift in Noun-Verb Pairs")
 
 # Introduction
 st.markdown("""
-#### Understanding Noun-Verb Stress Shift
+#### 1. Noun-Verb Stress Shift in English
 Some English words change their stress pattern depending on whether they are a **noun** or a **verb**.
 """, unsafe_allow_html=True)
 
@@ -49,8 +49,8 @@ if selected_word:
     noun_sentence, verb_sentence = word_pairs[selected_word]
     combined_sentence = f"{noun_sentence}\n{verb_sentence}"
 
-    st.write(f"**Noun Usage:** {noun_sentence}")
-    st.write(f"**Verb Usage:** {verb_sentence}")
+    st.write(f"**💛 Noun Usage:** {noun_sentence}")
+    st.write(f"**💙 Verb Usage:** {verb_sentence}")
 
     # Generate and play audio
     audio_data = generate_audio(combined_sentence)
