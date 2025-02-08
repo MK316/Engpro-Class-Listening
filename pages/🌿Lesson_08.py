@@ -4,7 +4,7 @@ import io
 
 # Create a new page for the lesson
 st.markdown("### 📘 Lesson: Stress Shift in Noun-Verb Pairs")
-
+st.caption("Workbook page 51")
 # Introduction
 st.markdown("""
 #### 1. Understanding Noun-Verb Stress Shift
