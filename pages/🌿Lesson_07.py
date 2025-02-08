@@ -31,7 +31,7 @@ for label, (korean, english) in borrowed_words.items():
         english_audio = generate_audio(english, 'en')
         st.audio(korean_audio, format='audio/mp3')
         st.audio(english_audio, format='audio/mp3')
-
+st.markdown("---")
 st.markdown("### 🎤 Generate Audio for Any Text")
 
 # User input box for text
