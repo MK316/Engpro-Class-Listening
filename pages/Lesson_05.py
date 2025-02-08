@@ -2,7 +2,7 @@ import streamlit as st
 from gtts import gTTS
 import io
 
-st.title("🎧 Listening Quiz: Identify [ɔ] Vowel")
+st.markdown("### 🎧 Listening Quiz: Identify [ɔ] Vowel")
 
 # Audio for the quiz
 quiz_audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/listening_quiz.mp3"
