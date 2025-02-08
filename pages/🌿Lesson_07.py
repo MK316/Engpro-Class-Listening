@@ -3,6 +3,7 @@ from gtts import gTTS
 import io
 
 st.markdown("#### 🔊 Comparing Pronunciation of Borrowed Words")
+st.caption("Workbook page 48")
 
 # List of borrowed words in Korean and English
 borrowed_words = {
