@@ -37,16 +37,10 @@ st.markdown("### 🎤 Generate Audio for Any Text")
 # User input box for text
 user_text = st.text_input("Enter text:")
 
-# Language selection dropdown
-language_option = st.selectbox("Select Language:", ["Korean", "English"])
-
-# Map language selection to language code
-language_code = "ko" if language_option == "Korean" else "en"
-
 # Button to generate audio for user-input text
 if st.button("Generate Audio"):
     if user_text:
-        audio_output = generate_audio(user_text, language_code)
+        audio_output = generate_audio(user_text, "en")
         st.audio(audio_output, format='audio/mp3')
     else:
         st.warning("Please enter text before generating audio.")
