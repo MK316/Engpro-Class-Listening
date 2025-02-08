@@ -71,8 +71,6 @@ with tab1:
                 st.text(feedback)
 
 with tab2:
-
-with tab2:
     st.write("Read aloud - Little Red Riding Hood")
     st.markdown("""
     The story revolves around a girl called Little Red Riding Hood, 
