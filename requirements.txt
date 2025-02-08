@@ -1,6 +1,9 @@
 streamlit
-gtts
+requests
 pandas
-pydub
+numpy
 matplotlib
-Numpy
+qrcode
+Pillow
+wordcloud
+gtts
