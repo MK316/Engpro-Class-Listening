@@ -3,7 +3,7 @@ from gtts import gTTS
 import io
 import datetime
 
-st.title("🎧 Listening Quiz: Identify [ɔ] Vowel")
+st.markdown("### 🎧 Listening Quiz: Identify [ɔ] Vowel")
 
 
 # User ID Input
