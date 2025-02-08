@@ -84,7 +84,6 @@ with tab2:
     he goes to the grandmother's house and gains entry by pretending to be the girl. 
     He swallows the grandmother whole (in some stories, he locks her in the closet) 
     and waits for the girl, disguised as the grandma. 
-    ---
     """)
   
     st.markdown("#### 🍎 1. Generate Audio with Different Speeds")
