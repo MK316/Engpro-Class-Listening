@@ -6,7 +6,7 @@ import datetime
 st.title("🎧 Listening Quiz: Identify [ɔ] Vowel")
 
 # User ID Input
-user_id = st.text_input("Enter your name or student ID:")
+user_id = st.text_input("Enter your name with student ID: 홍길동(2025120032)")
 
 # Audio for the quiz
 quiz_audio_url = "https://github.com/MK316/Engpro-Class-Listening/raw/main/audio/L05A.wav"
