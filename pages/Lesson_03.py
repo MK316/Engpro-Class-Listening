@@ -72,6 +72,7 @@ with tab1:
 
 with tab2:
     st.write("Read aloud - Little Red Riding Hood")
+    st.image("https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/images/Littleredridinghood.jpg")
     st.markdown("""
     Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, 
     after the red hooded cape/cloak she wears. The girl walks through the woods 
