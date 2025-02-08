@@ -3,15 +3,15 @@ from gtts import gTTS
 import io
 
 # Create a new page for the lesson
-st.markdown("### 📘 Lesson: Stress Shift in Noun-Verb Pairs")
+st.title("📘 Lesson: Stress Shift in Noun-Verb Pairs")
 
 # Introduction
 st.markdown("""
-#### 1. Noun-Verb Stress Shift in English
+### Understanding Noun-Verb Stress Shift
 Some English words change their stress pattern depending on whether they are a **noun** or a **verb**.
 """, unsafe_allow_html=True)
 
-# Visual representation of stress patterns using Markdown + HTML
+# Visual representation of stress patterns
 st.markdown("""
 <style>
     .stress { font-size: 24px; font-weight: bold; color: #E74C3C; }
@@ -34,26 +34,27 @@ word_pairs = {
 }
 
 # Function to generate audio
-def generate_audio(sentence):
-    tts = gTTS(text=sentence, lang='en')
+def generate_audio(noun_text, verb_text):
+    plain_text = f"{noun_text}\n{verb_text}"  # Remove Markdown formatting for audio
+    tts = gTTS(text=plain_text, lang='en')
     audio_data = io.BytesIO()
     tts.write_to_fp(audio_data)
     audio_data.seek(0)
     return audio_data
 
 # User selection for audio playback
-st.markdown("#### 🎧 Listen to Examples")
+st.markdown("### 🎧 Listen to Examples")
 selected_word = st.selectbox("Choose a word to hear its noun and verb pronunciation:", list(word_pairs.keys()))
 
 if selected_word:
     noun_sentence, verb_sentence = word_pairs[selected_word]
-    combined_sentence = f"{noun_sentence}\n{verb_sentence}"
 
+    # Display text in bold (Markdown)
     st.write(f"**💛 Noun Usage:** {noun_sentence}")
     st.write(f"**💙 Verb Usage:** {verb_sentence}")
 
-    # Generate and play audio
-    audio_data = generate_audio(combined_sentence)
+    # Generate and play audio using plain text
+    audio_data = generate_audio(noun_sentence.replace("**", ""), verb_sentence.replace("**", ""))
     st.audio(audio_data.getvalue(), format='audio/mp3')
 
 st.markdown("---")
