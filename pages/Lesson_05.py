@@ -5,6 +5,9 @@ import datetime
 
 st.title("🎧 Listening Quiz: Identify [ɔ] Vowel")
 
+# User ID Input
+user_id = st.text_input("Enter your name or student ID:")
+
 # Audio for the quiz
 quiz_audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/listening_quiz.mp3"
 st.audio(quiz_audio_url, format='audio/mp3')
@@ -34,11 +37,8 @@ if st.button("Submit Quiz"):
     # Get current date and time
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Placeholder for user ID (Replace with authentication-based ID if available)
-    user_id = "User123"  # If authentication is available, replace with actual user identifier
-
     st.markdown(f"### 📝 Quiz Results")
-    st.write(f"**User ID:** {user_id}")
+    st.write(f"**User ID:** {user_id if user_id else 'Anonymous'}")
     st.write(f"**Date & Time:** {current_time}")
     st.write(f"**Your Score:** {score}/5")
     
