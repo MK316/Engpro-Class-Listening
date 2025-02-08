@@ -41,7 +41,7 @@ def generate_audio(noun_text, verb_text):
     tts.write_to_fp(audio_data)
     audio_data.seek(0)
     return audio_data
-
+st.markdown("---")
 # User selection for audio playback
 st.markdown("### 🎧 Listen to Examples")
 selected_word = st.selectbox("Choose a word to hear its noun and verb pronunciation:", list(word_pairs.keys()))
@@ -74,7 +74,7 @@ sentences = {
 }
 
 st.markdown("#### 🎤 Practice: Say Aloud the Following Sentences")
-st.caption("Be sure to make the unstressed vowels weak.")
+st.markdown("💡 **Tip:** Listen carefully and repeat each sentence while focusing on unstressed vowels.")
 
 # Convert sentences dictionary into a list of options (formatted as "Number: Sentence")
 sentence_options = [f"{num}. {text}" for num, text in sentences.items()]
@@ -99,4 +99,3 @@ if st.button(f"🔊 Play Sentence {selected_number}"):
     st.audio(audio_data.getvalue(), format='audio/mp3')
 
 st.markdown("---")
-st.markdown("💡 **Tip:** Listen carefully and repeat each sentence while focusing on unstressed vowels.")
