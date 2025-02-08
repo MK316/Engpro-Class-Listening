@@ -93,8 +93,6 @@ def generate_audio(text):
     audio_data.seek(0)
     return audio_data
 
-# Display the selected sentence and play audio
-st.markdown(f"**You selected:** {selected_sentence}")
 
 if st.button(f"🔊 Play Sentence {selected_number}"):
     audio_data = generate_audio(selected_sentence)
