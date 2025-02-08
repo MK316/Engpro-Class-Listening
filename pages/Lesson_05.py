@@ -9,7 +9,7 @@ quiz_audio_url = "https://github.com/MK316/Engpro-Class-Listening/raw/main/audio
 st.audio(quiz_audio_url, format='audio/wav')
 
 st.write("You will hear two sentences. Select the one that contains a word with the vowel [ɔ].")
-st.write("Example")
+st.write("⭐ Example")
 st.write("(a) It's in the hall. (b) It's in the hole.")
 st.markdown("---")
 # Quiz questions and correct answers
