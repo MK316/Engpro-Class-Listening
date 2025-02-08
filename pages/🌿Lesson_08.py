@@ -9,9 +9,20 @@ st.title("📘 Lesson: Stress Shift in Noun-Verb Pairs")
 st.markdown("""
 ### Understanding Noun-Verb Stress Shift
 Some English words change their stress pattern depending on whether they are a **noun** or a **verb**.
-- **Noun:** The stress is on the **first syllable** (e.g., **'record**).
-- **Verb:** The stress is on the **second syllable** (e.g., **re'cord**).
-""")
+""", unsafe_allow_html=True)
+
+# Visual representation of stress patterns using Markdown + HTML
+st.markdown("""
+<style>
+    .stress { font-size: 24px; font-weight: bold; color: #E74C3C; }
+    .word { font-size: 22px; font-weight: bold; }
+</style>
+
+- **<span class="word">Noun</span>:** The stress is on the **first syllable**  
+  → <span class="stress">'REcord</span>  
+- **<span class="word">Verb</span>:** The stress is on the **second syllable**  
+  → <span class="stress">re'CORD</span>  
+""", unsafe_allow_html=True)
 
 # Word pairs for demonstration
 word_pairs = {
