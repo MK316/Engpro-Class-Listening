@@ -74,8 +74,8 @@ with tab2:
     st.write("Read aloud - Little Red Riding Hood")
     st.image("https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/images/Littleredridinghood.jpg")
     st.markdown("""
-    Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, 
-    after the red hooded cape/cloak she wears. The girl walks through the woods 
+    The story revolves around a girl called Little Red Riding Hood, 
+    after the red hooded cape or cloak she wears. The girl walks through the woods 
     to deliver food to her sickly grandmother (wine and cake depending on the translation). 
     In the Grimms' version at least, she had the order from her mother to stay strictly on the path.
     A mean wolf wants to eat the girl and the food in the basket. He secretly stalks her 
@@ -92,7 +92,7 @@ with tab2:
 
     # Text to be converted to speech
     text = """Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, after the
-    red hooded cape/cloak she wears. The girl walks through the woods to
+    red hooded cape or cloak she wears. The girl walks through the woods to
     deliver food to her sickly grandmother (wine and cake depending on the
     translation). In the Grimms' version at least, she had the order from her
     mother to stay strictly on the path.
@@ -140,7 +140,7 @@ with tab2:
     st.write("Read aloud - Little Red Riding Hood. ")
     st.markdown("""
     Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, 
-    after the red hooded cape/cloak she wears. The girl walks through the woods 
+    after the red hooded cape or cloak she wears. The girl walks through the woods 
     to deliver food to her sickly grandmother (wine and cake depending on the translation). 
     In the Grimms' version at least, she had the order from her mother to stay strictly on the path.
     A mean wolf wants to eat the girl and the food in the basket. He secretly stalks her 
