@@ -15,7 +15,7 @@ st.audio(quiz_audio_url, format='audio/wav')
 
 st.write("Choose a word that contains [æ] vowel.")
 
-st.write("Example")
+st.write("🐤 Example")
 st.write("(You'll hear) 1. add  2. Ed  3. odd")
 st.markdown("---")
 # Quiz questions and correct answers
