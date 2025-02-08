@@ -5,8 +5,8 @@ import io
 st.markdown("### 🎧 Listening Quiz: Identify [ɔ] Vowel")
 
 # Audio for the quiz
-quiz_audio_url = "https://github.com/MK316/Engpro-Class/raw/main/audio/listening_quiz.mp3"
-st.audio(quiz_audio_url, format='audio/mp3')
+quiz_audio_url = "https://github.com/MK316/Engpro-Class-Listening/raw/main/audio/L05A.wav"
+st.audio(quiz_audio_url, format='audio/wav')
 
 st.write("You will hear two sentences. Select the one that contains a word with the vowel [ɔ].")
 
