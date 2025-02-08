@@ -21,8 +21,6 @@ def generate_audio(text, language):
     audio_data.seek(0)
     return audio_data
 
-st.markdown("### 🎧 Listen to the Pronunciations")
-
 # Generate audio buttons for each word pair
 for label, (korean, english) in borrowed_words.items():
     st.write(f"**{label}**")
