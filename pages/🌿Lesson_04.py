@@ -17,6 +17,7 @@ st.write("Choose a word that contains [æ] vowel.")
 
 st.write("🐤 Example")
 st.write("(You'll hear) 1. add  2. Ed  3. odd")
+st.write("Choose '1' for the correct answer")
 st.markdown("---")
 # Quiz questions and correct answers
 quiz_options = {
