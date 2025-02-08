@@ -76,8 +76,14 @@ sentences = {
 st.markdown("#### 🎤 Practice: Say Aloud the Following Sentences")
 st.caption("Be sure to make the unstressed vowels weak.")
 
+# Convert sentences dictionary into a list of options (formatted as "Number: Sentence")
+sentence_options = [f"{num}. {text}" for num, text in sentences.items()]
+
 # Display sentence options
-selected_number = st.selectbox("Select a sentence to practice:", list(sentences.keys()))
+selected_option = st.selectbox("Select a sentence to practice:", sentence_options)
+
+# Extract the selected sentence number and text
+selected_number, selected_sentence = selected_option.split(". ", 1)
 
 # Function to generate audio
 def generate_audio(text):
@@ -88,14 +94,11 @@ def generate_audio(text):
     return audio_data
 
 # Display the selected sentence and play audio
-if selected_number:
-    selected_sentence = sentences[selected_number]
-    st.markdown(f"**Sentence {selected_number}:** {selected_sentence}")
-    
-    if st.button(f"🔊 Play Sentence {selected_number}"):
-        audio_data = generate_audio(selected_sentence)
-        st.audio(audio_data.getvalue(), format='audio/mp3')
+st.markdown(f"**You selected:** {selected_sentence}")
+
+if st.button(f"🔊 Play Sentence {selected_number}"):
+    audio_data = generate_audio(selected_sentence)
+    st.audio(audio_data.getvalue(), format='audio/mp3')
 
 st.markdown("---")
 st.markdown("💡 **Tip:** Listen carefully and repeat each sentence while focusing on unstressed vowels.")
-
