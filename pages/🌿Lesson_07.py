@@ -6,11 +6,11 @@ st.markdown("#### 🔊 Comparing Pronunciation of Borrowed Words")
 
 # List of borrowed words in Korean and English
 borrowed_words = {
-    "토이스토리 / Toy Story": ("토이스토리", "Toy Story"),
-    "부탄가스 / Butane Gas": ("부탄가스", "Butane Gas"),
-    "로그온 / Log On": ("로그온", "Log On"),
-    "노트북 / Notebook": ("노트북", "Notebook"),
-    "프라이드치킨 / Fried Chicken": ("프라이드치킨", "Fried Chicken")
+    "1. 토이스토리 / Toy Story": ("토이스토리", "Toy Story"),
+    "2. 부탄가스 / Butane Gas": ("부탄가스", "Butane Gas"),
+    "3. 로그온 / Log On": ("로그온", "Log On"),
+    "4. 노트북 / Notebook": ("노트북", "Notebook"),
+    "5. 프라이드치킨 / Fried Chicken": ("프라이드치킨", "Fried Chicken")
 }
 
 # Function to generate audio for Korean and English separately
