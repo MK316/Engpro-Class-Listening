@@ -58,4 +58,44 @@ if selected_word:
     st.audio(audio_data.getvalue(), format='audio/mp3')
 
 st.markdown("---")
-st.markdown("**Practice different word pairs to understand the pronunciation changes!** 🎤")
+
+# Sentences for practice
+sentences = {
+    "1": "How are you today?",
+    "2": "I'll see you tonight.",
+    "3": "The boy likes the alphabet song.",
+    "4": "He never complains about his work.",
+    "5": "I suppose it's possible.",
+    "6": "We should consider the possibility.",
+    "7": "You need to complete the assignment by tomorrow.",
+    "8": "My cousin will arrive at seven tonight.",
+    "9": "We need to utilize our knowledge.",
+    "10": "Please set up the alarm at eleven."
+}
+
+st.markdown("#### 🎤 Practice: Say Aloud the Following Sentences")
+st.caption("Be sure to make the unstressed vowels weak.")
+
+# Display sentence options
+selected_number = st.selectbox("Select a sentence to practice:", list(sentences.keys()))
+
+# Function to generate audio
+def generate_audio(text):
+    tts = gTTS(text=text, lang='en')
+    audio_data = io.BytesIO()
+    tts.write_to_fp(audio_data)
+    audio_data.seek(0)
+    return audio_data
+
+# Display the selected sentence and play audio
+if selected_number:
+    selected_sentence = sentences[selected_number]
+    st.markdown(f"**Sentence {selected_number}:** {selected_sentence}")
+    
+    if st.button(f"🔊 Play Sentence {selected_number}"):
+        audio_data = generate_audio(selected_sentence)
+        st.audio(audio_data.getvalue(), format='audio/mp3')
+
+st.markdown("---")
+st.markdown("💡 **Tip:** Listen carefully and repeat each sentence while focusing on unstressed vowels.")
+
