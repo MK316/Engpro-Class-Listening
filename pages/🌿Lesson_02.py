@@ -133,7 +133,7 @@ with tab2:
                 st.text(feedback)
 
 with tab3:
-    st.info("<Example> (You'll hear 'They cleaned the ship. Choose 'ship' as correct answer.'
+    st.info("<Example> (You'll hear 'They cleaned the ship. Choose 'ship' as correct answer.")
 
     
 
