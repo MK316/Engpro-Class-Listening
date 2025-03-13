@@ -148,20 +148,20 @@ with tab2:
 
 with tab3:
      st.markdown("""
-    ---
-    <Example>  
+        ---
+        <Example>  
+        
+        Q: Choose the ONE you hear.
+        
+        (you will hear) 
+        
+        They cleaned the ship / sheep.  
     
-    Q: Choose the ONE you hear.
+        (you answer: choose the one you hear)
     
-    (you will hear) 
-    
-    They cleaned the ship / sheep.  
-
-    (you answer: choose the one you hear)
-
-    ship
-    ---
-    """)
+        ship
+        ---
+        """)
     
 
     # Define the sentences with choice pairs as shown in the image
@@ -176,7 +176,7 @@ with tab3:
         8: ("I heard every _______.", ["beat", "bit"]),
         9: ("They stored the _______.", ["beans", "bins"]),
         10: ("Everyone talks about the _______.", ["heat", "hit"])
-    }
+        }
 
     # Provide a single audio file that contains all questions
     audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01C.wav?raw=true'
