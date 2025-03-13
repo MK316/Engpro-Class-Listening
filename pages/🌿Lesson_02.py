@@ -85,8 +85,24 @@ with tab2:
         10: ("week", "wick")
     }
 
+    st.markdown("""
+    ---
+    <Example>  
+    
+    Q: Choose ONE as you hear.
+    
+    (you will hear) 
+    
+    mitt / meat  
+
+    (you answer: choose the one you hear)
+
+    mitt
+    """)
+    st.markdown("---")
+    
     # Provide a single audio file that contains all questions
-    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
+    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01B.wav?raw=true'
     st.audio(audio_file, format='audio/wav', start_time=0)
 
     # Display instructions
@@ -131,6 +147,21 @@ with tab2:
                 st.text(feedback)
 
 with tab3:
+     st.markdown("""
+    ---
+    <Example>  
+    
+    Q: Choose the ONE you hear.
+    
+    (you will hear) 
+    
+    They cleaned the ship / sheep.  
+
+    (you answer: choose the one you hear)
+
+    ship
+    """)
+    st.markdown("---")
     # Define the sentences with choice pairs as shown in the image
     sentence_pairs = {
         1: ("They cleaned the _______.", ["ship", "sheep"]),
@@ -146,7 +177,7 @@ with tab3:
     }
 
     # Provide a single audio file that contains all questions
-    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
+    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01C.wav?raw=true'
     st.audio(audio_file, format='audio/wav', start_time=0)
 
     # Display instructions
