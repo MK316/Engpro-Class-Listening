@@ -161,7 +161,9 @@ with tab3:
 
     ship
     """)
+    
     st.markdown("---")
+
     # Define the sentences with choice pairs as shown in the image
     sentence_pairs = {
         1: ("They cleaned the _______.", ["ship", "sheep"]),
