@@ -92,7 +92,7 @@ with tab2:
     st.audio(audio_file2, format='audio/wav', start_time=0)
 
     # Display instructions
-    st.write("You’ll hear one word. Listen and circle the word that you hear.")
+    st.write("Q: You’ll hear one word. Listen and circle the word that you hear.")
     
     # This dictionary will hold the user's answers
     answers = {}
@@ -133,21 +133,8 @@ with tab2:
                 st.text(feedback)
 
 with tab3:
-    st.markdown("""
-        ---
-        <Example>  
-        
-        Q: Choose the ONE you hear.
-        
-        (you will hear) 
-        
-        They cleaned the ship / sheep.  
-    
-        (you answer: choose the one you hear)
-    
-        ship
-        ---
-        """)
+    st.info("<Example> (You'll hear 'They cleaned the ship. Choose 'ship' as correct answer.'
+
     
 
     # Define the sentences with choice pairs as shown in the image
