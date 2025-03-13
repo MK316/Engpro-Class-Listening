@@ -27,7 +27,7 @@ with tab1:
     # Display instructions
 
 
-    st.markdown("#### Q: Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
+    st.markdown("#### Q: Listen to the audio and answer the questions below. Each number corresponds to the sequence of words spoken in the audio.")
     
     # Loop through the number of questions to display them
     for i in range(1, num_questions + 1):
