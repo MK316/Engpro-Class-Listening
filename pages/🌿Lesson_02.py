@@ -165,7 +165,7 @@ with tab3:
     
 
     # Define the sentences with choice pairs as shown in the image
-    sentence_pairs = {
+        sentence_pairs = {
         1: ("They cleaned the _______.", ["ship", "sheep"]),
         2: ("Will he _______?", ["leave", "live"]),
         3: ("The boy was _______.", ["beaten", "bitten"]),
