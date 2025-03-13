@@ -85,21 +85,7 @@ with tab2:
         10: ("week", "wick")
     }
 
-    st.markdown("""
-    ---
-    <Example>  
-    
-    Q: Choose ONE as you hear.
-    
-    (you will hear) 
-    
-    mitt / meat  
-
-    (you answer: choose the one you hear)
-
-    mitt
-    """)
-    st.markdown("---")
+    st.info("<Example> Choose the ONE you hear: mitt / meat (circle mitt)")
     
     # Provide a single audio file that contains all questions
     audio_file2 = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01B.wav?raw=true'
