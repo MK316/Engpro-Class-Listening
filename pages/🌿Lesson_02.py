@@ -122,7 +122,7 @@ with tab2:
                 st.text(feedback)
 
 with tab3:
-    st.info("<Example> (You'll hear) 'They cleaned the ship'. Choose 'ship' as the correct answer.")
+    st.info("<Example> (You'll hear) 'You need a new wheel'. Choose 'wheel' as the correct answer.")
 
     
 
@@ -152,7 +152,7 @@ with tab3:
     # Define the correct answers (update these as per your quiz answers)
     correct_answers = {
         1: "ship", 2: "leave", 3: "bitten", 4: "neat", 5: "cheeks",
-        6: "hills", 7: "sleep", 8: "bit", 9: "bins", 10: "heat"
+        6: "heels", 7: "slip", 8: "beat", 9: "beans", 10: "heat"
     }
 
     # Loop through the number of questions to display them
