@@ -23,23 +23,9 @@ with tab1:
     st.audio(audio_file1, format='audio/wav', start_time=0)
     
     # Display instructions
-    st.write("Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
 
-    st.markdown("""
-    ---
-    <Example>  
-    
-    Q: Choose ONE that is different from the others.
-    
-    (you will hear) 
-    
-    1. mitt  2. meat 3. meat  
-
-    (you answer)
-
-    1. mitt
-    """)
-    st.markdown("---")
+    st.info("<Example> Choose ONE that is different from the others. (you will hear) 1. mitt  2. meat 3. meat, and choose  1. mitt as the correct answer")
+    st.markdown("#### Q: Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
     
     # Loop through the number of questions to display them
     for i in range(1, num_questions + 1):
@@ -92,7 +78,7 @@ with tab2:
     st.audio(audio_file2, format='audio/wav', start_time=0)
 
     # Display instructions
-    st.write("Q: You’ll hear one word. Listen and circle the word that you hear.")
+    st.markdown("#### Q:You’ll hear one word. Listen and circle the word that you hear.")
     
     # This dictionary will hold the user's answers
     answers = {}
@@ -156,7 +142,7 @@ with tab3:
     st.audio(audio_file3, format='audio/wav', start_time=0)
 
     # Display instructions
-    st.write("Listen and circle the word that is used to complete each sentence.")
+    st.markdown("#### Q: Listen and circle the word that is used to complete each sentence.")
 
     # This dictionary will hold the user's answers
     answers = {}
