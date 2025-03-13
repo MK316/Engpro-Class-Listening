@@ -16,8 +16,8 @@ with tab1:
     
     # Define the correct answers (update these as per your quiz answers)
     correct_answers = {
-        1: 2, 2: 3, 3: 1, 4: 2, 5: 1,
-        6: 3, 7: 2, 8: 1, 9: 3, 10: 2
+        1: 1, 2: 3, 3: 2, 4: 3, 5: 1,
+        6: 1, 7: 2, 8: 1, 9: 2, 10: 1
     }
 
     # Provide a single audio file that contains all questions
