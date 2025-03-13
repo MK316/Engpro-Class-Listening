@@ -160,9 +160,9 @@ with tab3:
     (you answer: choose the one you hear)
 
     ship
+    ---
     """)
     
-    st.markdown("---")
 
     # Define the sentences with choice pairs as shown in the image
     sentence_pairs = {
