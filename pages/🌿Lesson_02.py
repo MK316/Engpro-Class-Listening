@@ -28,6 +28,7 @@ with tab1:
 
 
     st.markdown("#### Q: Listen to the audio and answer the questions below. Each number corresponds to the sequence of words spoken in the audio.")
+    st.markdown("---")
     
     # Loop through the number of questions to display them
     for i in range(1, num_questions + 1):
@@ -80,8 +81,8 @@ with tab2:
     st.audio(audio_file2, format='audio/wav', start_time=0)
 
     # Display instructions
-    st.markdown("#### Q:You’ll hear one word. Listen and circle the word that you hear.")
-    
+    st.markdown("#### Q: You’ll hear one word. Listen and circle the word that you hear.")
+    st.markdown("---")
     # This dictionary will hold the user's answers
     answers = {}
     # Define the correct answers (update these as per your quiz answers)
@@ -145,7 +146,7 @@ with tab3:
 
     # Display instructions
     st.markdown("#### Q: Listen and circle the word that is used to complete each sentence.")
-
+    st.markdown("---")
     # This dictionary will hold the user's answers
     answers = {}
     # Define the correct answers (update these as per your quiz answers)
