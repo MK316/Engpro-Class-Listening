@@ -6,7 +6,9 @@ import os
 tab1, tab2, tab3, tab4 = st.tabs(["🎱 Exercise A", "🎱 Exercise B", "🎱 Exercise C", "🎾 Read-aloud"])
 
 with tab1:
-    st.caption("Workbook page 27")
+    st.caption("Workbook page 26")
+    st.info("<Example> Choose ONE that is different from the others. (you will hear) 1. mitt  2. meat 3. meat, and choose  1. mitt as the correct answer")
+    
     # Define the number of questions
     num_questions = 10
     # This dictionary will hold the user's answers
@@ -24,7 +26,7 @@ with tab1:
     
     # Display instructions
 
-    st.info("<Example> Choose ONE that is different from the others. (you will hear) 1. mitt  2. meat 3. meat, and choose  1. mitt as the correct answer")
+
     st.markdown("#### Q: Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
     
     # Loop through the number of questions to display them
