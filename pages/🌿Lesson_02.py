@@ -88,7 +88,7 @@ with tab2:
     # Define the correct answers (update these as per your quiz answers)
     correct_answers = {
         1: "field", 2: "bean", 3: "knit", 4: "dill", 5: "bit",
-        6: "Team", 7: "slip", 8: "grin", 9: "hill", 10: "wick"
+        6: "team", 7: "slip", 8: "green", 9: "hill", 10: "wick"
     }
 
     # Loop through the number of questions to display them
