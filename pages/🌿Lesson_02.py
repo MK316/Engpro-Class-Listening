@@ -19,8 +19,8 @@ with tab1:
     }
 
     # Provide a single audio file that contains all questions
-    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
-    st.audio(audio_file, format='audio/wav', start_time=0)
+    audio_file1 = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
+    st.audio(audio_file1, format='audio/wav', start_time=0)
     
     # Display instructions
     st.write("Listen to the audio and answer the questions below. Each question corresponds to a segment in the audio.")
@@ -102,8 +102,8 @@ with tab2:
     st.markdown("---")
     
     # Provide a single audio file that contains all questions
-    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01B.wav?raw=true'
-    st.audio(audio_file, format='audio/wav', start_time=0)
+    audio_file2 = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01B.wav?raw=true'
+    st.audio(audio_file2, format='audio/wav', start_time=0)
 
     # Display instructions
     st.write("You’ll hear one word. Listen and circle the word that you hear.")
@@ -179,8 +179,8 @@ with tab3:
         }
 
     # Provide a single audio file that contains all questions
-    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01C.wav?raw=true'
-    st.audio(audio_file, format='audio/wav', start_time=0)
+    audio_file3 = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01C.wav?raw=true'
+    st.audio(audio_file3, format='audio/wav', start_time=0)
 
     # Display instructions
     st.write("Listen and circle the word that is used to complete each sentence.")
