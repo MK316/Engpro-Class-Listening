@@ -22,6 +22,8 @@ Example)
 
 😍 Correct answer: (a)
 """)
+
+st.markdown("---")
 # Quiz questions and correct answers
 quiz_options = {
     "1": "(a) (b)",
