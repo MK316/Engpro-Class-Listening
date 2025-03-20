@@ -138,7 +138,7 @@ with tab2:
     
     st.write("Read aloud - Little Red Riding Hood. ")
     st.markdown("""
-    Little Red Riding Hood. The story revolves around a girl called Little Red Riding Hood, 
+    The story revolves around a girl called Little Red Riding Hood, 
     after the red hooded cape or cloak she wears. The girl walks through the woods 
     to deliver food to her sickly grandmother (wine and cake depending on the translation). 
     In the Grimms' version at least, she had the order from her mother to stay strictly on the path.
