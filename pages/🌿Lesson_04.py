@@ -51,7 +51,7 @@ if st.button("Submit Quiz"):
     st.markdown(f"### 📝 Quiz Results")
     st.write(f"**User ID:** {user_id if user_id else 'Anonymous'}")
     st.write(f"**Date & Time:** {current_time}")
-    st.write(f"**Your Score:** {score}/5")
+    st.write(f"**Your Score:** {score}/10")
     
     if missing:
         st.write("❌ **Incorrect answers:**", ", ".join(missing))
