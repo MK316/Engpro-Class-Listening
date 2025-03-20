@@ -38,6 +38,8 @@ correct_answers = {"1": "1", "2": "3", "3": "1", "4": "2", "5": "3", "6":"1","7"
 # User answers selection
 user_answers = {}
 for key in quiz_options.keys():
+    if f"quiz_{key}" not in st.session_state:
+        st.session_state[f"quiz_{key}"] = "1"  # default value
     user_answers[key] = st.radio(f"Question {key}", ["1", "2", "3"], key=f"quiz_{key}")
 
 # Submit button to check answers
