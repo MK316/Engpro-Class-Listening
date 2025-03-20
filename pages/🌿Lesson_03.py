@@ -118,12 +118,11 @@ with tab2:
 
     # Audio files
     audio_urls = {
-        'Male': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-M.mp3?raw=true',
-        'Female': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-F.mp3?raw=true',
-        'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-Elliot.mp3?raw=true'
+        'Male': 'https://github.com/MK316/Engpro-Class/raw/main/audio/little-red-riding-hood-M.mp3',
+        'Female': 'https://github.com/MK316/Engpro-Class/raw/main/audio/little-red-riding-hood-F.mp3'
     }
 
-    selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
+    selected_voice = st.selectbox("Select Voice", options=['Female', 'Male'], key='selected_voice')
     st.caption("You can change the speech by clicking the three vertical dots in the audio panel.")
     if st.button("Show Selected Audio"):
         selected_audio_url = audio_urls[selected_voice]
