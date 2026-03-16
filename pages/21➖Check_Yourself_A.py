@@ -94,7 +94,7 @@ if st.sidebar.button("🔄 Reset Exercise"):
     st.session_state.user_name = ""
     st.rerun()
 
-st.title("🎱 Exercise A")
+st.markdown("### 🎱 Exercise A")
 
 # --- 5. App Logic Flow ---
 if not st.session_state.exercise_started:
