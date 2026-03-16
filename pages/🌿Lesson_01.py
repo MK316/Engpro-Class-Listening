@@ -47,7 +47,7 @@ st.markdown("""
 sentences = {
     "[i]": "Number one. She sees three green trees near the deep sea.",
     "[ɪ]": "Number two. It's pretty chilly in the city this winter.",
-    "[e]": "Number three. Let's get some fresh bread and celebrate.",
+    "[ɛ]": "Number three. Let's get some fresh bread and celebrate.",
     "[æ]": "Number four. Jack grabbed a snack and sat on the back deck.",
     "[ɑ]": "Number five. Mark parked his car in the dark barn.",
     "[ʊ]": "Number six. Good cooks look for full wood bookshelves.",
