@@ -99,7 +99,7 @@ if st.sidebar.button("🔄 Reset Exercise"):
     st.session_state.user_name = ""
     st.rerun()
 
-st.title("🎱 Check Yourself B: Word Identification")
+st.markdown("### 🎱 Check Yourself B: Word Identification")
 
 # --- 5. 앱 로직 흐름 ---
 if not st.session_state.exercise_started:
