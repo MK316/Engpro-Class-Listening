@@ -5,17 +5,17 @@ import datetime
 
 
 # Create a tab bar with three tabs
-tab1, tab2 = st.tabs(["🎱 Exercise A", "🎾 Read-aloud"])
+tab1, tab2 = st.tabs(["🎱 Check Yourself A", "🎾 Read-aloud"])
 
 with tab1:
     st.markdown("### 🎧 Listening Quiz: Identify [æ] Vowel")
-    st.caption("Workbook page 35")
+    st.caption("Workbook page 34")
     
     # User ID Input
     user_id = st.text_input("Enter your name or student ID:", placeholder="홍길동(2025120032)")
     
     # Audio for the quiz
-    quiz_audio_url = "https://github.com/MK316/Engpro-Class-Listening/raw/main/audio/L04A.wav"
+    quiz_audio_url = "https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/audio/L04A.wav"
     st.audio(quiz_audio_url, format='audio/wav')
     
     st.write("Choose a word that contains [æ] vowel.")
