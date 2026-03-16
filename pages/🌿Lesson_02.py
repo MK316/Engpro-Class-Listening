@@ -7,10 +7,15 @@ tab1, tab2, tab3, tab4 = st.tabs(["🎱 Exercise A", "🎱 Exercise B", "🎱 Ex
 
 with tab1:
     st.caption("Workbook page 26")
+    st.markdown("#### 🎧 Task Instructions")
+    st.write("In this exercise, you will hear a sequence of three words. Your goal is to identify the one word that sounds different from the other two.")
     st.info("""
-        <Example> Choose ONE that is different from the others.  
+        <Example> 
+        
+        Choose ONE that is different from the others.  
         (you will hear) 1. mitt, 2. meat, 3. meat  
-        And choose 1. mitt as the correct answer
+        
+        And you choose 1. (mitt) as the correct answer
         """)
     # Define the number of questions
     num_questions = 10
