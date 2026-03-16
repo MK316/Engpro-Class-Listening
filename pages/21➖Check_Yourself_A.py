@@ -130,7 +130,7 @@ else:
     for i in range(1, 11):
         answers[i] = st.radio(f"Question {i}", ('1', '2', '3'), key=f'ex_a_q{i}', horizontal=True)
 
-    if st.button('Submit & Get Feedback'):
+    if st.button('✅ Submit & Get Feedback'):
         end_time = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S")
         score = sum(1 for q, c in correct_answers.items() if int(answers[q]) == c)
         
