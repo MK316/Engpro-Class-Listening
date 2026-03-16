@@ -3,7 +3,7 @@ from gtts import gTTS
 import os
 
 # Create a tab bar with three tabs
-tab1, tab2 = st.tabs(["🎱 Exercise A", "🎾 Read-aloud"])
+tab1, tab2 = st.tabs(["🎱 Check Yourself A", "🎾 Read-aloud"])
 
 with tab1:
     st.caption("Workbook page 31")
@@ -19,7 +19,7 @@ with tab1:
     }
 
     # Provide a single audio file that contains all questions
-    audio_file = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L03U.wav?raw=true'
+    audio_file = 'https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/audio/L03U.wav?raw=true'
     st.audio(audio_file, format='audio/wav', start_time=0)
     
     # Display instructions
