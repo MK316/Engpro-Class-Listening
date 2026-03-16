@@ -83,7 +83,7 @@ for i in range(1, num_questions + 1):
 
 if st.button('Submit and Generate Report'):
     if not user_name:
-        st.error("Please enter your name in the sidebar before submitting.")
+        st.error("Please enter your name in the sidebar (left side >>) before submitting.")
     else:
         correct_count = 0
         report_data = []
