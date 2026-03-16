@@ -88,7 +88,7 @@ with tab1:
     st.caption("Workbook page 31")
     
     if not st.session_state.exercise_started:
-        st.subheader("📋 Student Identification")
+        st.subheader("📋 Your name")
         name_input = st.text_input("Please enter your full name to begin:", value=st.session_state.user_name)
         
         st.divider()
