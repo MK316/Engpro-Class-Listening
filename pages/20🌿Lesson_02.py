@@ -235,9 +235,9 @@ with tab4:
 
     # Audio files
     audio_urls = {
-        'Male': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-M.mp3?raw=true',
-        'Female': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-F.mp3?raw=true',
-        'MK316': 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/Read-Beatles-Elliot.mp3?raw=true'
+        'Male': 'https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/audio/Read-Beatles-M.mp3',
+        'Female': 'https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/audio/Read-Beatles-F.mp3',
+        'MK316': 'https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/audio/Read-Beatles-Elliot.mp3'
     }
 
     selected_voice = st.selectbox("Select Voice", options=['Male', 'Female', 'MK316'], key='selected_voice')
