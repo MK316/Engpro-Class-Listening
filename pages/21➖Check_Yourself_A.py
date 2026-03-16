@@ -11,8 +11,12 @@ st.set_page_config(page_title="Listening Exercise A", page_icon="🎱")
 # --- 2. PDF Generation Logic ---
 class PDF(FPDF):
     def header(self):
-        self.set_fill_color(51, 52, 153)
-        self.rect(0, 0, 210, 35, 'F')
+        # --- FIX: Reduced width of blue filled box ---
+        # Original: self.rect(0, 0, 210, 35, 'F') (210mm is full A4 width)
+        # New: Reduced width so it only sits behind the title text.
+        self.set_fill_color(51, 102, 153) # Navy Blue
+        self.rect(20, 0, 170, 35, 'F') # Adjusted x-position and width to match centered text area
+
         self.set_font('Arial', 'B', 16)
         self.set_text_color(255, 255, 255)
         self.cell(0, 15, 'Exercise A: Listening Discrimination Report', 0, 1, 'C')
@@ -32,6 +36,7 @@ def create_pdf(name, score, total, results, start_t, end_t):
     pdf = PDF()
     pdf.add_page()
     
+    # --- The text location below is now safe ---
     # Metadata
     pdf.set_font('Arial', 'B', 12)
     pdf.set_text_color(0, 0, 0)
