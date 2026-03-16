@@ -104,7 +104,7 @@ st.markdown("### 🎱 Check Yourself B: Word Identification")
 # --- 5. 앱 로직 흐름 ---
 if not st.session_state.exercise_started:
     # 단계 1: 이름 입력 및 시작 전 안내
-    st.subheader("📋 Student Identification")
+    st.subheader("📋 Your name")
     name_input = st.text_input("Please enter your full name to begin:", value=st.session_state.user_name)
     
     st.divider()
