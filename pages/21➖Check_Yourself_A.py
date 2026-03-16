@@ -11,15 +11,23 @@ st.set_page_config(page_title="Listening Exercise A", page_icon="🎱")
 # --- 2. PDF Generation Logic ---
 class PDF(FPDF):
     def header(self):
-        # --- FIX: Reduced width of blue filled box ---
-        # Original: self.rect(0, 0, 210, 35, 'F') (210mm is full A4 width)
-        # New: Reduced width so it only sits behind the title text.
         self.set_fill_color(51, 102, 153) # Navy Blue
-        self.rect(20, 0, 170, 35, 'F') # Adjusted x-position and width to match centered text area
+        # --- FIX: Reduced vertical height and adjusted width back to full page ---
+        # The rect parameters are: (x, y, width, height, style)
+        # y is set to 0 to start at the absolute top of the page.
+        # Original: self.rect(0, 0, 210, 35, 'F')
+        # New: Shorter height (e.g., 20mm instead of 35mm), and y starting from 0.
+        # I have set width back to 210 (full page) as you mentioned horizontally it's OK.
+        self.rect(0, 0, 210, 20, 'F') 
 
         self.set_font('Arial', 'B', 16)
         self.set_text_color(255, 255, 255)
-        self.cell(0, 15, 'Exercise A: Listening Discrimination Report', 0, 1, 'C')
+        # Position title within the new shorter box. y=0 starts title at top of page.
+        # Need to increase ln height so it doesn't collide.
+        self.set_y(0)
+        self.cell(0, 20, 'Exercise A: Listening Discrimination Report', 0, 1, 'C')
+        
+        # Add a bit of ln to ensure text on next page has space
         self.ln(5)
 
 def create_pdf(name, score, total, results, start_t, end_t):
@@ -34,10 +42,16 @@ def create_pdf(name, score, total, results, start_t, end_t):
     duration_str = f"{mins}m {secs}s"
 
     pdf = PDF()
+    
+    # --- FIX: Increased top margin for metadata page ---
+    # This creates a safe distance after the header for the regular page content.
+    # Increasing this (e.g., to 30mm) ensures the Student Name text is safely below
+    # the blue box which ends at y=20mm.
+    pdf.set_top_margin(30)
+    
     pdf.add_page()
     
-    # --- The text location below is now safe ---
-    # Metadata
+    # Metadata text location is now safe
     pdf.set_font('Arial', 'B', 12)
     pdf.set_text_color(0, 0, 0)
     pdf.cell(0, 10, f"Student Name: {name}", 0, 1)
