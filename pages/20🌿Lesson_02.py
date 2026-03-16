@@ -3,19 +3,18 @@ from gtts import gTTS
 import os
 
 # Create a tab bar with three tabs
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Overview", "🎱 Exercise A", "🎱 Exercise B", "🎱 Exercise C", "🎾 Read-aloud"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["♻️ Overview", "🎱 Exercise A", "🎱 Exercise B", "🎱 Exercise C", "🎾 Read-aloud"])
 
 with tab1:
     st.markdown("### Overview")
     st.markdown("""
-    Welcome! This application is designed to enhance your English listening discrimination and reading skills through four specialized modules.
+    Welcome! This web application is your digital companion for the **'Check Yourself'** listening exercises in your workbook.
     
     **How to use this app:**
     1. **Practice Phase:** Use the **four tabs** above to practice **Exercise A, B, C**, and **Read-aloud**. You can listen to the audio files as many times as you need to familiarize yourself with the sounds and sentences.
     2. **Test & Report Phase:** Once you feel confident, navigate to the **sidebar menu on the left**. You can take a formal test for each exercise (A, B, and C). 
     3. **Feedback Report:** After finishing each test, the system will provide immediate score feedback. You can then **download a personalized PDF report** which includes your name, score, and a detailed review of your correct and incorrect answers with timestamps.
     
-    *Master the nuances of English sounds and track your progress with our automated reporting system!*
     """)
 with tab2:
     st.caption("Workbook page 26")
