@@ -21,8 +21,8 @@ with tab1:
     }
 
     # Provide a single audio file that contains all questions
-    audio_file1 = 'https://github.com/MK316/Engpro-Class-Listening/blob/main/audio/L01A.wav?raw=true'
-    st.audio(audio_file1, format='audio/wav', start_time=0)
+    audio_file1 = 'https://raw.githubusercontent.com/MK316/Engpro-Class-Listening/main/audio/L01A.wav'
+    st.audio(audio_file1, format='audio/wav')
     
     # Display instructions
 
