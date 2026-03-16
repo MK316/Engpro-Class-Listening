@@ -3,9 +3,21 @@ from gtts import gTTS
 import os
 
 # Create a tab bar with three tabs
-tab1, tab2, tab3, tab4 = st.tabs(["🎱 Exercise A", "🎱 Exercise B", "🎱 Exercise C", "🎾 Read-aloud"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Overview", "🎱 Exercise A", "🎱 Exercise B", "🎱 Exercise C", "🎾 Read-aloud"])
 
 with tab1:
+    st.markdown("### Overview")
+    st.markdown("""
+    Welcome! This application is designed to enhance your English listening discrimination and reading skills through four specialized modules.
+    
+    **How to use this app:**
+    1. **Practice Phase:** Use the **four tabs** above to practice **Exercise A, B, C**, and **Read-aloud**. You can listen to the audio files as many times as you need to familiarize yourself with the sounds and sentences.
+    2. **Test & Report Phase:** Once you feel confident, navigate to the **sidebar menu on the left**. You can take a formal test for each exercise (A, B, and C). 
+    3. **Feedback Report:** After finishing each test, the system will provide immediate score feedback. You can then **download a personalized PDF report** which includes your name, score, and a detailed review of your correct and incorrect answers with timestamps.
+    
+    *Master the nuances of English sounds and track your progress with our automated reporting system!*
+    """)
+with tab2:
     st.caption("Workbook page 26")
     st.markdown("#### 🎧 Task Instructions")
     st.write("In this exercise, you will hear a sequence of three words. Your goal is to identify the one word that sounds different from the other two.")
@@ -67,7 +79,7 @@ with tab1:
             for feedback in incorrect_feedback:
                 st.text(feedback)
 
-with tab2:
+with tab3:
     # Define the pairs of words as shown in the image
     word_pairs = {
         1: ("field", "filled"),
@@ -130,7 +142,7 @@ with tab2:
             for feedback in incorrect_feedback:
                 st.text(feedback)
 
-with tab3:
+with tab4:
     st.info("<Example> (You'll hear) 'You need a new wheel'. Choose 'wheel' as the correct answer.")
 
     
@@ -193,7 +205,7 @@ with tab3:
             st.subheader("Review the incorrect answers:")
             for feedback in incorrect_feedback:
                 st.text(feedback)
-with tab4:
+with tab5:
     st.write("Read aloud - The Beatles")
     st.markdown("""
     The Beatles were an English rock band that formed in Liverpool, in 1960.  
