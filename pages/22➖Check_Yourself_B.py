@@ -6,7 +6,7 @@ import io
 
 # --- 1. 시간대 및 페이지 설정 ---
 KST = pytz.timezone('Asia/Seoul')
-st.set_page_config(page_title="Listening Exercise B", page_icon="🎱", layout="centered")
+st.set_page_config(page_title="Check Yourself B", page_icon="🎱", layout="centered")
 
 # --- 2. PDF 생성 로직 (Vertical Header Fix 반영) ---
 class PDF(FPDF):
@@ -99,7 +99,7 @@ if st.sidebar.button("🔄 Reset Exercise"):
     st.session_state.user_name = ""
     st.rerun()
 
-st.title("🎱 Exercise B: Word Identification")
+st.title("🎱 Check Yourself B: Word Identification")
 
 # --- 5. 앱 로직 흐름 ---
 if not st.session_state.exercise_started:
