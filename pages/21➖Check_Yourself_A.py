@@ -11,7 +11,7 @@ st.set_page_config(page_title="Listening Exercise A", page_icon="🎱")
 # --- 2. PDF Generation Logic ---
 class PDF(FPDF):
     def header(self):
-        self.set_fill_color(51, 102, 153)
+        self.set_fill_color(51, 52, 153)
         self.rect(0, 0, 210, 35, 'F')
         self.set_font('Arial', 'B', 16)
         self.set_text_color(255, 255, 255)
