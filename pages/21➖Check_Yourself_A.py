@@ -6,7 +6,7 @@ import io
 
 # --- 1. Timezone Configuration ---
 KST = pytz.timezone('Asia/Seoul')
-st.set_page_config(page_title="Listening Exercise A", page_icon="🎱")
+st.set_page_config(page_title="Check Yourself A", page_icon="🎱")
 
 # --- 2. PDF Generation Logic ---
 class PDF(FPDF):
@@ -99,7 +99,7 @@ st.title("🎱 Exercise A")
 # --- 5. App Logic Flow ---
 if not st.session_state.exercise_started:
     # --- PHASE 1: IDENTIFICATION & START ---
-    st.subheader("📋 Student Identification")
+    st.subheader("📋 Your Name")
     name_input = st.text_input("Please enter your full name to begin:", value=st.session_state.user_name)
     
     st.divider()
@@ -130,7 +130,7 @@ else:
     for i in range(1, 11):
         answers[i] = st.radio(f"Question {i}", ('1', '2', '3'), key=f'ex_a_q{i}', horizontal=True)
 
-    if st.button('Finish & Generate PDF'):
+    if st.button('Submit & Get Feedback'):
         end_time = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S")
         score = sum(1 for q, c in correct_answers.items() if int(answers[q]) == c)
         
